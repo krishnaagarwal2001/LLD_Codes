@@ -47,7 +47,7 @@ class PaymentProcessingHanlder : public OrderHandler {
 // Concrete handler for order preparation.
 class OrderPreparationHandler : public OrderHandler {
     public:
-        OrderPreparationHandler(OrderHandler* nexxtHandler) : OrderHandler(nextHandler) {}
+        OrderPreparationHandler(OrderHandler* nextHandler) : OrderHandler(nextHandler) {}
 
         void processOrder(const string& order) {
             cout<<"Preparing order: "<<order<<endl;
@@ -63,7 +63,7 @@ class OrderPreparationHandler : public OrderHandler {
 // Concrete handler for delivery assignment.
 class DeliveryAssignmentHandler : public OrderHandler {
     public:
-        DeliveryAssignmentHandler(OrderHandler* nexxtHandler) : OrderHandler(nextHandler) {}
+        DeliveryAssignmentHandler(OrderHandler* nextHandler) : OrderHandler(nextHandler) {}
 
         void processOrder(const string& order) {
             cout<<"Assigning delivery for order: "<<order<<endl;
@@ -80,7 +80,7 @@ class DeliveryAssignmentHandler : public OrderHandler {
 // Concrete handler for order tracking.
 class OrderTrackingHandler : public OrderHandler {
     public:
-        OrderTrackingHandler(OrderHandler* nexxtHandler) : OrderHandler(nextHandler) {}
+        OrderTrackingHandler(OrderHandler* nextHandler) : OrderHandler(nextHandler) {}
 
         void processOrder(const string& order) {
             cout<<"Tracking order: "<<order<<endl;
